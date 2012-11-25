@@ -1,0 +1,28 @@
+#!/bin/bash                                                                     
+
+SESSION=$1
+if [ "x$SESSION" = "x" ]; then
+    echo "pick a session"                                                       
+    tmux list-sessions
+    exit;
+fi
+
+export STY="$SESSION"
+
+if tmux has-session -t $SESSION 2>/dev/null; then
+    true
+else
+    case $SESSION in
+        irc)
+            tmux new-session -d -s $SESSION -n 'irssi' irssi
+            tmux new-window -t $SESSION -n 'bash'
+            tmux select-window -t $SESSION:0
+        ;;
+        *)
+            tmux new-session -d -s $SESSION
+    esac
+fi
+
+tmux -2 attach-session -t $SESSION
+
+exit 0
