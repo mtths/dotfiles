@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/mz/.q3a/q3ut4/nexuconfig-v3_5'
-let g:netrw_dirhist_2='/etc/openvpn/gh'
-let g:netrw_dirhist_3='/usr/share/glipper/plugins'
-let g:netrw_dirhist_4='/home/mz/.config/pystromo/config'
-let g:netrw_dirhist_5='/home/mz/.perlbrew'
-let g:netrw_dirhist_6='/tmp/dotfiles/.vim/bundle/ack.vim'
