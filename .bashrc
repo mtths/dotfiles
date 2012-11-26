@@ -99,6 +99,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# host-specific stuff here
 if [ -f $HOME/.rc.local ]; then
     . $HOME/.rc.local
 fi
@@ -111,9 +112,5 @@ function md() {
 keychain id_rsa id_dsa
 [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     source $HOME/.keychain/$HOSTNAME-sh
-
-export PERL_CPANM_OPT="--local-lib=~/perl5"
-export PERL5LIB="$HOME/perl5/lib/perl5:$HOME/perl5/lib/perl5/x86_64-linux-gnu-thread-multi"
-source ~/perl5/perlbrew/etc/bashrc
 
 vnstat -d | head -5; vnstat -d | tail -9
