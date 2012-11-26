@@ -1,0 +1,17 @@
+setlocal isfname+=:
+let perl_want_scope_in_variables=1
+let perl_extended_vars=1
+let perl_include_pod=1
+" check perl code with :make
+set makeprg=perl\ -c\ %
+set errorformat=%f:%l:%m
+" quickfix for Perl error formats
+set errorformat+=%m\ at\ %f\ line\ %l\.
+set errorformat+=%m\ at\ %f\ line\ %l
+set autowrite
+
+map ,# :s,^,#<cr>
+map ,!# :s,^#,,<cr>
+map ,pt :!perltidy -q -l=76 -ce -nola<cr>
+
+noremap ,pc :!time $HOME/bin/pc --critic %<cr>

@@ -118,9 +118,7 @@ set winminheight=0
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
-vmap gl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
-
-
+vmap <Leader>bl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 " automatically source the .vimrc file if I change it
 " the bang (!) forces it to overwrite this command rather than stack it
@@ -131,30 +129,6 @@ noremap ,V  :split ~/.vimrc<cr>
 
 inoremap <f5> :make<cr>
 noremap <f5> :make<cr>
-
-"-------------------------------------------------------------------------------
-" comma always f
-"-------------------------------------------------------------------------------
-"inoremap  ,  ,<Space>
-
-" replaced by delimitMate.vim
-" http://www.vim.org/scripts/script.php?script_id=2754
-"-------------------------------------------------------------------------------
-"inoremap  (  ()<Left>
-"inoremap  [  []<Left>
-"inoremap  {  {}<Left>
-"inoremap  '  ''<Left>
-"inoremap  "  ""<Left>
-"
-"vnoremap  (  s()<Esc>P<Right>%
-"vnoremap  [  s[]<Esc>P<Right>%
-"vnoremap  {  s{}<Esc>P<Right>%
-
-" surround content with additional spaces
-
-vnoremap  )  s(  )<Esc><Left>P<Right><Right>%
-vnoremap  ]  s[  ]<Esc><Left>P<Right><Right>%
-vnoremap  }  s{  }<Esc><Left>P<Right><Right>%
 
 " highlight current line (toggle)
 autocmd WinEnter * setlocal cursorline

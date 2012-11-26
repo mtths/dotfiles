@@ -21,6 +21,7 @@ link '.bashrc'
 link '.tmux.conf'
 
 linkbin 'bin/tmx'
+linkbin 'bin/pc'
 
 echo "==============="
 echo "Dotfiles linked"
