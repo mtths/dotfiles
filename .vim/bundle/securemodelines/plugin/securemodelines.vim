@@ -1,15 +1,15 @@
 " vim: set sw=4 sts=4 et ft=vim :
 " Script:           securemodelines.vim
-" Version:          20070518
-" Author:           Ciaran McCreesh <ciaranm@ciaranm.org>
-" Homepage:         http://ciaranm.org/tag/securemodelines
+" Author:           Ciaran McCreesh <ciaran.mccreesh at googlemail.com>
+" Homepage:         http://github.com/ciaranm/securemodelines
 " Requires:         Vim 7
 " License:          Redistribute under the same terms as Vim itself
 " Purpose:          A secure alternative to modelines
 
-if &compatible || v:version < 700
+if &compatible || v:version < 700 || exists('g:loaded_securemodelines')
     finish
 endif
+let g:loaded_securemodelines = 1
 
 if (! exists("g:secure_modelines_allowed_items"))
     let g:secure_modelines_allowed_items = [
@@ -22,6 +22,9 @@ if (! exists("g:secure_modelines_allowed_items"))
                 \ "foldmethod",  "fdm",
                 \ "readonly",    "ro",   "noreadonly", "noro",
                 \ "rightleft",   "rl",   "norightleft", "norl",
+                \ "cindent",     "cin",  "nocindent", "nocin",
+                \ "smartindent", "si",   "nosmartindent", "nosi",
+                \ "autoindent",  "ai",   "noautoindent", "noai",
                 \ "spell",
                 \ "spelllang"
                 \ ]
@@ -40,7 +43,7 @@ if (! exists("g:secure_modelines_leave_modeline"))
         set nomodeline
         if g:secure_modelines_verbose
             echohl WarningMsg
-            echomsg "Forcibly disabling internal modelines for securemodelines.vim"
+            echo "Forcibly disabling internal modelines for securemodelines.vim"
             echohl None
         endif
     endif
@@ -56,13 +59,13 @@ fun! <SID>IsInList(list, i) abort
 endfun
 
 fun! <SID>DoOne(item) abort
-    let l:matches = matchlist(a:item, '^\([a-z]\+\)\%(=[a-zA-Z0-9_\-.]\+\)\?$')
+    let l:matches = matchlist(a:item, '^\([a-z]\+\)\%([-+^]\?=[a-zA-Z0-9_\-.]\+\)\?$')
     if len(l:matches) > 0
         if <SID>IsInList(g:secure_modelines_allowed_items, l:matches[1])
             exec "setlocal " . a:item
         elseif g:secure_modelines_verbose
             echohl WarningMsg
-            echomsg "Ignoring '" . a:item . "' in modeline"
+            echo "Ignoring '" . a:item . "' in modeline"
             echohl None
         endif
     endif
@@ -93,7 +96,7 @@ fun! <SID>CheckVersion(op, ver) abort
 endfun
 
 fun! <SID>DoModeline(line) abort
-    let l:matches = matchlist(a:line, '\%(\S\@<!\%(vi\|vim\([<>=]\?\)\([0-9]\+\)\?\)\|\sex\):\s*set\?\s\+\([^:]\+\):\S\@!')
+    let l:matches = matchlist(a:line, '\%(\S\@<!\%(vi\|vim\([<>=]\?\)\([0-9]\+\)\?\)\|\sex\):\s*\%(set\s\+\)\?\([^:]\+\):\S\@!')
     if len(l:matches) > 0
         let l:operator = ">"
         if len(l:matches[1]) > 0
@@ -144,6 +147,6 @@ endfun
 
 aug SecureModeLines
     au!
-    au BufRead * :call <SID>DoModelines()
+    au BufRead,StdinReadPost * :call <SID>DoModelines()
 aug END
 
