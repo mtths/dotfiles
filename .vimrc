@@ -2,13 +2,15 @@ call pathogen#infect()
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 syntax on
-let g:molokai_original=1
-"colorscheme ez
 colorscheme badwolf
-"colorscheme darkspectrum
-"colorscheme desert256
 "colorscheme ez
 set background=dark
+
+if exists('+colorcolumn')
+    set colorcolumn=78
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
+endif
 
 " jump to the last position when reopening a file
 if has("autocmd")
