@@ -106,7 +106,10 @@ fi
 
 # custom functions
 function md() {
-        mkdir -p "$*" && cd "$*"
+    mkdir -p "$*" && cd "$*"
+}
+function hx() {
+    hexdump -e '20/1 "%02X ""\n"" "' -e '20/1 "%c  ""\n"'
 }
 
 keychain id_rsa id_dsa
