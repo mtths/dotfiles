@@ -12,6 +12,8 @@ else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
 endif
 
+let g:SuperTabDefaultCompletionType = "context"
+
 " jump to the last position when reopening a file
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

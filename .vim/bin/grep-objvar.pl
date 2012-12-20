@@ -1,0 +1,1 @@
+../bundle/perlomni.vim/bin/grep-objvar.pl
