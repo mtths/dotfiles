@@ -48,7 +48,11 @@ set smartindent                 " smart autoindenting when starting a new line
 set hidden                      " manage multiple buffers effectively
 set smarttab
 
+set modelines=3
+let mapleader = ","
+
 nnoremap <Leader>tt :call ListcharsToggle()<CR>
+let g:listchars_tab = 1
 function! ListcharsToggle()
     if g:listchars_tab == 0
         setlocal list lcs=tab:\ \ 
@@ -60,9 +64,6 @@ function! ListcharsToggle()
         echom "listchars on"
     endif
 endfunction
-
-set modelines=3
-let mapleader = ","
 
 map Y y$
 
