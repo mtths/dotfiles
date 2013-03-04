@@ -74,18 +74,10 @@ nmap <silent> ,/ :nohlsearch<CR>
 set scrolloff=3
 
 " folding settings
-set foldmethod=indent   "fold based on indent
+set foldmethod=syntax   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
-
-" create menu for vim
-"source $VIMRUNTIME/menu.vim
-"set wildmenu
-"set wildmode=list:full
-"set cpo-=<
-"set wcm=<C-Z>
-"map <F4> :emenu <C-Z>
 
 "some selfdefined mappings
 "    ;; regex search & replace w/ global modifier
@@ -102,17 +94,6 @@ map ,in :call MyIndent()<cr>
 
 set pastetoggle=<F11>
 
-""" replaced by supertab.vim
-"function! InsertTabWrapper()
-"    let col = col('.') - 1
-"    if !col || getline('.')[col - 1] !~ '\k'
-"        return "\<tab>"
-"    else
-"        return "\<c-p>"
-"    endif
-"endfunction
-"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-"iunmap <tab>
 "Shift-tab to insert a hard tab
 imap <silent> <S-tab> <C-v><tab>
 
@@ -122,7 +103,6 @@ imap <silent> <S-tab> <C-v><tab>
 set encoding=UTF-8
 "someone set up us the BOM
 "set bomb
-
 
 set statusline=%f%m%r%h%w\ [%{&ff}]%y\%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k(%l/%L,%v)\ %p%%
 set laststatus=2
