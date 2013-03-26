@@ -62,6 +62,9 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 " keep some context around cursor
 set scrolloff=3
 
+" ignore whitespace in diff mode
+set diffopt+=iwhite
+
 " folding settings
 set foldmethod=syntax   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
