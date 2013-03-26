@@ -51,19 +51,8 @@ set smarttab
 set modelines=3
 let mapleader = ","
 
-nnoremap <Leader>tt :call ListcharsToggle()<CR>
-let g:listchars_tab = 1
-function! ListcharsToggle()
-    if g:listchars_tab == 0
-        setlocal list lcs=tab:\ \ 
-        let g:listchars_tab = 1
-        echom "listchars off"
-    else
-        setlocal listchars=tab:>-,trail:‧
-        let g:listchars_tab = 0
-        echom "listchars on"
-    endif
-endfunction
+set list listchars=tab:>-,trail:‧
+nmap <silent> <leader>tt :set nolist!<CR>
 
 map Y y$
 
