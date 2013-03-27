@@ -52,28 +52,19 @@ set smarttab
 set modelines=3
 let mapleader = ","
 
-nnoremap <Leader>tt :call ListcharsToggle()<CR>
-let g:listchars_tab = 0
-function! ListcharsToggle()
-    if g:listchars_tab == 0
-        setlocal list lcs=tab:\ \ 
-        let g:listchars_tab = 1
-        echom "listchars off"
-    else
-        setlocal listchars=tab:>-,trail:‧
-        let g:listchars_tab = 0
-        echom "listchars on"
-    endif
-endfunction
-set listchars=tab:>-,trail:‧
+set list listchars=tab:>-,trail:‧
+nmap <silent> <leader>tt :set nolist!<CR>
 
 map Y y$
 
 " reset search highlighting
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> <leader>/ :nohlsearch<CR>
 
 " keep some context around cursor
 set scrolloff=3
+
+" ignore whitespace in diff mode
+set diffopt+=iwhite
 
 " folding settings
 set foldmethod=syntax   "fold based on indent
@@ -92,7 +83,7 @@ function! MyIndent()
     execute ':' . oldLine
 endfun
 
-map ,in :call MyIndent()<cr>
+map <leader>in :call MyIndent()<cr>
 
 set pastetoggle=<F11>
 
@@ -113,14 +104,14 @@ set winminheight=0
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
-vmap <Leader>bl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+vmap <leader>bl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 " automatically source the .vimrc file if I change it
 " the bang (!) forces it to overwrite this command rather than stack it
 autocmd! BufWritePost .vimrc source %
 
-noremap ,v  :source ~/.vimrc<cr>
-noremap ,V  :split ~/.vimrc<cr>
+noremap <leader>v  :source ~/.vimrc<cr>
+noremap <leader>V  :split ~/.vimrc<cr>
 
 inoremap <f5> :make<cr>
 noremap <f5> :make<cr>
@@ -130,8 +121,7 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 "hi CursorLine   cterm=NONE ctermbg=lightgrey ctermfg=darkgrey guibg=lightgrey guifg=darkgrey
 "hi CursorColumn cterm=NONE ctermbg=lightgrey ctermfg=darkgrey guibg=lightgrey guifg=darkgrey
-"nnoremap <Leader>c :set cursorline! cursorline!<CR>
-nnoremap <Leader>cl :set cursorline!<CR>
+nnoremap <leader>cl :set cursorline!<CR>
 
 set expandtab
 set sw=4
