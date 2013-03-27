@@ -21,6 +21,7 @@ if has("autocmd")
 
     " Use perl compiler for all *.pl and *.pm files.
     autocmd BufNewFile,BufRead *.p[lm] compiler perl
+    autocmd BufNewFile,BufRead *.psgi setfiletype perl
     " :make :clist :cnext :cprevious
     autocmd BufNewFile,BufRead *.p6 setfiletype perl6
     autocmd! BufWritePost *.pl :silent! !chmod +x %
@@ -52,7 +53,7 @@ set modelines=3
 let mapleader = ","
 
 nnoremap <Leader>tt :call ListcharsToggle()<CR>
-let g:listchars_tab = 1
+let g:listchars_tab = 0
 function! ListcharsToggle()
     if g:listchars_tab == 0
         setlocal list lcs=tab:\ \ 
@@ -64,6 +65,7 @@ function! ListcharsToggle()
         echom "listchars on"
     endif
 endfunction
+set listchars=tab:>-,trail:‧
 
 map Y y$
 
