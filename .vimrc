@@ -126,3 +126,7 @@ nnoremap <leader>cl :set cursorline!<CR>
 set expandtab
 set sw=4
 set ts=4
+
+" plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" ack.vim
+nmap ,a :Ack 
