@@ -52,7 +52,7 @@ set smarttab
 set modelines=3
 let mapleader = ","
 
-set list listchars=tab:>-,trail:‧
+set list listchars=tab:▸\ ,trail:‧,nbsp:˔
 nmap <silent> <leader>tt :set nolist!<CR>
 
 map Y y$
