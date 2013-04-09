@@ -113,9 +113,6 @@ autocmd! BufWritePost .vimrc source %
 noremap <leader>v  :source ~/.vimrc<cr>
 noremap <leader>V  :split ~/.vimrc<cr>
 
-inoremap <f5> :make<cr>
-noremap <f5> :make<cr>
-
 " highlight current line (toggle)
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
@@ -129,4 +126,7 @@ set ts=4
 
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
-nmap ,a :Ack 
+nmap ,a :Ack
+
+" gundo.vim
+nnoremap <F5> :GundoToggle<CR>
