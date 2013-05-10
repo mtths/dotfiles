@@ -126,7 +126,8 @@ set ts=4
 
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
-nmap ,a :Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+nmap ,a :Ack 
 
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>
