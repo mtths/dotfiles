@@ -15,22 +15,22 @@ use autodie;
 GetOptions(
     critic => \my $critic,
 ) or die;
-    
+
 my $libcustom = '.libcustom';
-    
+
 my $prog = shift // die "Usage: $0 perlfile";
-    
+
 my $PERL5LIB = $ENV{PERL5LIB} // '';
 if ( -f $libcustom ) {
     chomp( my @libs = io($libcustom)->slurp );
     $PERL5LIB = join ':' => $PERL5LIB, @libs;
 }
-    
+
 my ( undef, $tempfile ) = tempfile();
-    
+
 my $perl = "PERL5LIB=$PERL5LIB perl ";
 my $command = "$perl -c $prog 2>$tempfile 1>$tempfile";
-    
+
 # if anything goes to STDERR and the program completes successfully, don't
 # show anything because we're going to rerun with warnings::unused and we
 # don't need to duplicate the messages to STDERR

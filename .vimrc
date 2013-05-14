@@ -104,6 +104,8 @@ set winminheight=0
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
+" svn diff mode
+map <leader>df :new<cr>:r!svn diff<cr>:set ft=diff<cr>:resize<cr>
 vmap <leader>bl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 " automatically source the .vimrc file if I change it
@@ -123,6 +125,8 @@ nnoremap <leader>cl :set cursorline!<CR>
 set expandtab
 set sw=4
 set ts=4
+
+set undodir=~/.vim/undodir
 
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
