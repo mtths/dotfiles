@@ -5,7 +5,11 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-export TERM=xterm-256color
+if [[ "$TERM" != screen* ]]
+then
+    export TERM=xterm-256color
+fi
+
 export HISTFILESIZE=40000
 export HISTSIZE=40000
 export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S] "

@@ -2,9 +2,10 @@ call pathogen#infect()
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 syntax on
+set t_Co=256
 colorscheme badwolf
 "colorscheme ez
-set background=dark
+"set background=dark
 
 if exists('+colorcolumn')
     set colorcolumn=78
@@ -54,8 +55,6 @@ let mapleader = ","
 
 set list listchars=tab:▸\ ,trail:‧,nbsp:˔
 nmap <silent> <leader>tt :set nolist!<CR>
-
-map Y y$
 
 " reset search highlighting
 nmap <silent> <leader>/ :nohlsearch<CR>
