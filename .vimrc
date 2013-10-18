@@ -18,7 +18,7 @@ let g:SuperTabDefaultCompletionType = "context"
 " jump to the last position when reopening a file
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-    au BufNewFile,BufRead *.tt2,*.tt setf tt2 
+    au BufNewFile,BufRead *.tt2,*.tt setf tt2
 
     " Use perl compiler for all *.pl and *.pm files.
     autocmd BufNewFile,BufRead *.p[lm] compiler perl
@@ -84,6 +84,12 @@ endfun
 
 map <leader>in :call MyIndent()<cr>
 
+" make <C-Left/Right> work again
+if &term =~ "^screen"
+    map <esc>[1;5D <C-Left>
+    map <esc>[1;5C <C-Right>
+endif
+
 set pastetoggle=<F11>
 
 "Shift-tab to insert a hard tab
@@ -130,7 +136,10 @@ set undodir=~/.vim/undodir
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
-nmap ,a :Ack 
+nmap ,a :Ack
 
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>
+
+" powerline.vim
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
