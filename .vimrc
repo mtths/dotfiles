@@ -84,6 +84,12 @@ endfun
 
 map <leader>in :call MyIndent()<cr>
 
+" make <C-Left/Right> work again
+if &term =~ "^screen"
+    map <esc>[1;5D <C-Left>
+    map <esc>[1;5C <C-Right>
+endif
+
 set pastetoggle=<F11>
 
 "Shift-tab to insert a hard tab
