@@ -107,11 +107,14 @@ if [ -f $HOME/.rc.local ]; then
 fi
 
 # custom functions
-function md() {
+md() {
     mkdir -p "$*" && cd "$*"
 }
-function hx() {
+hx() {
     hexdump -e '20/1 "%02X ""\n"" "' -e '20/1 "%c  ""\n"'
+}
+pgw() {
+    ping $( ip route list 0/0 | awk '{ print $3 }' )
 }
 
 keychain id_rsa id_dsa
