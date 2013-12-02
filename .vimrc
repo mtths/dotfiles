@@ -143,3 +143,6 @@ nnoremap <F5> :GundoToggle<CR>
 
 " powerline.vim
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+" trailing-whitespace
+map <leader>fw :FixWhitespace<CR>
