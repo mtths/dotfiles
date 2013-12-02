@@ -110,7 +110,7 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
 " svn diff mode
-map <leader>df :new<cr>:r!svn diff<cr>:set ft=diff<cr>:resize<cr>
+map <leader>df :new<cr>:r!svn diff<cr>:set ft=diff<cr>:resize<cr>gg
 vmap <leader>bl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 " automatically source the .vimrc file if I change it
@@ -141,8 +141,9 @@ nmap ,a :Ack
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>
 
-" powerline.vim
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" vim-airline
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_powerline_fonts = 1
 
 " trailing-whitespace
 map <leader>fw :FixWhitespace<CR>
