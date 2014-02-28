@@ -29,7 +29,7 @@ if ( -f $libcustom ) {
 my ( undef, $tempfile ) = tempfile();
 
 my $perl = "PERL5LIB=$PERL5LIB perl ";
-my $command = "$perl -c $prog 2>$tempfile 1>$tempfile";
+my $command = "$perl -MO=Lint -c $prog 2>$tempfile 1>$tempfile";
 
 # if anything goes to STDERR and the program completes successfully, don't
 # show anything because we're going to rerun with warnings::unused and we
@@ -39,7 +39,7 @@ $error and do {
     print io($tempfile)->slurp;
     exit $error;
 };
-$command = "$perl -Mwarnings::unused -MVi::QuickFix -mO -e'O->import(\"Lint\")' -c $prog";
+$command = "$perl -Mwarnings::unused -MO=Lint -MVi::QuickFix -c $prog";
 system($command);
 
 if ($critic) {
