@@ -136,7 +136,7 @@ set undodir=~/.vim/undodir
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
-nmap ,a :Ack
+nmap ,a :Ack 
 
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>

@@ -1,0 +1,6 @@
+-pbp   # perl best practices
+-nce   # cuddled else                                                           -l=78  # line length
+-ci=8  # continuous indentation (after long line)
+-pt=2  # paren tightness
+-sbt=2 # square bracket tightness
+-sbt=2 # square bracket tightness

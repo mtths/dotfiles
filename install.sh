@@ -19,6 +19,7 @@ link '.vim/'
 link '.vimrc'
 link '.bashrc'
 link '.tmux.conf'
+link '.perltidyrc'
 
 linkbin 'bin/tmx'
 linkbin 'bin/pc'
