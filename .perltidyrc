@@ -1,6 +1,18 @@
--pbp   # perl best practices
--nce   # cuddled else                                                           -l=78  # line length
--ci=8  # continuous indentation (after long line)
--pt=2  # paren tightness
--sbt=2 # square bracket tightness
--sbt=2 # square bracket tightness
+# my .perltidyrc file
+#
+-ce     # cuddled else
+-l=78   # Max line width is 78 cols
+-i=4    # Indent level is 4 cols
+-ci=4   # Continuation indent is 4 cols
+-st     # Output to STDOUT
+-se     # Errors to STDERR
+-pt=2   # Maximal paren tightness
+-vt=2   # Maximal vertical tightness
+-vtc=2  # Maximal vertical closing tightness
+-lp     # line up parentheses
+-sot    # stack opening tokens
+-sct    # stack opening tokens
+-bbt=0  # Minimum block brace tightness
+-nsfs   # No space before semicolons
+-nolq   # Don't outdent long quoted strings
+-wbb="% + - * / x != == >= <= =~ < > | & = **= += *= &= <<= &&= -= /= |= >>= ||= //= .= %= ^= x=" # Break before all operators
