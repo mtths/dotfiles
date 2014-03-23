@@ -16,4 +16,4 @@ map ,pt :!perltidy -q -l=76 -ce -nola<cr>
 
 iab MP; use Modern::Perl '2010';
 
-noremap ,pc :!time $HOME/bin/pc --critic %<cr>
+noremap ,pc :!time $HOME/bin/pc --critic %<cr>:cex system('test -f errors.err && cat errors.err')<cr>:cw<cr>

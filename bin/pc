@@ -11,7 +11,7 @@ use File::Temp 'tempfile';
 use IO::All;
 use Getopt::Long;
 use autodie;
-    
+
 GetOptions(
     critic => \my $critic,
 ) or die;
