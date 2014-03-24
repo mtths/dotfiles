@@ -12,7 +12,7 @@ set autowrite
 
 map ,# :s,^,#<cr>
 map ,!# :s,^#,,<cr>
-map ,pt :!perltidy -q -l=76 -ce -nola<cr>
+map ,pt :!perltidy -b %<cr>
 
 iab MP; use Modern::Perl '2010';
 
