@@ -147,3 +147,8 @@ let g:airline_powerline_fonts = 1
 
 " trailing-whitespace
 map <leader>fw :FixWhitespace<CR>
+
+" vim-hl-var
+set updatetime=200
+let g:hlvarhl="ctermbg=black ctermfg=blue guifg=#0000ff guibg=#000000 gui=bold"
+let g:hlvarcurrent = 1
