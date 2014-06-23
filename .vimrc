@@ -142,6 +142,8 @@ nmap ,a :Ack
 nnoremap <F5> :GundoToggle<CR>
 
 " vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_powerline_fonts = 1
 
