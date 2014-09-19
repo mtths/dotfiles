@@ -138,6 +138,10 @@ set undodir=~/.vim/undodir
 let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap ,a :Ack 
 
+" syntastic.vim
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>
 
