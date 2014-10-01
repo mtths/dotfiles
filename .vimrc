@@ -145,8 +145,8 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_perl_checker=1
 let g:syntastic_perl_perlcritic_thres=4
-let g:syntastic_perl_checkers = ['perl', 'podchecker', 'perlcritic']
-let g:syntastic_perl_interpreter='DANCER_CONFDIR=. perl'
+let g:syntastic_perl_checkers = ['perl', 'perlcritic']
+let g:syntastic_perl_interpreter='perl'
 
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>
