@@ -133,6 +133,8 @@ set ts=4
 
 set undodir=~/.vim/undodir
 
+set switchbuf=split
+
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'

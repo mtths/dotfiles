@@ -20,6 +20,7 @@ link '.vimrc'
 link '.bashrc'
 link '.tmux.conf'
 link '.perltidyrc'
+link '.LESS_TERMCAP'
 
 linkbin 'bin/tmx'
 linkbin 'bin/pc'
