@@ -12,12 +12,46 @@
 "       It tries to preserve cursor position and avoids
 "       replacing the buffer with stderr output.
 "
+" Options:
+"
+"   g:go_fmt_commands [default=1]
+"
+"       Flag to indicate whether to enable the commands listed above.
+"
+"   g:gofmt_command [default="gofmt"]
+"
+"       Flag naming the gofmt executable to use.
+"
+if exists("b:did_ftplugin_go_fmt")
+    finish
+endif
 
-command! -buffer Fmt call s:GoFormat()
+if !exists("g:go_fmt_commands")
+    let g:go_fmt_commands = 1
+endif
+
+if g:go_fmt_commands
+    command! -buffer Fmt call s:GoFormat()
+endif
+
+if !exists('g:go_fmt_autofmt')
+    let g:go_fmt_autofmt = 1
+endif
+
+if g:go_fmt_autofmt
+    " Run gofmt before saving file
+    autocmd BufWritePre <buffer> :keepjumps Fmt " thanks @justinmk
+endif
+
+if !exists("g:gofmt_command")
+    let g:gofmt_command = "gofmt"
+endif
 
 function! s:GoFormat()
     let view = winsaveview()
-    silent %!gofmt
+
+    silent execute "%!" . g:gofmt_command
+
     if v:shell_error
         let errors = []
         for line in getline(1, line('$'))
@@ -41,4 +75,6 @@ function! s:GoFormat()
     call winrestview(view)
 endfunction
 
-" vim:ts=4:sw=4:et
+let b:did_ftplugin_go_fmt = 1
+
+" vim:sw=4:et
