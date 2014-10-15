@@ -3,11 +3,11 @@
 " license that can be found in the LICENSE file.
 
 if exists("b:current_syntax")
-  finish
+    finish
 endif
 
 syn case match
-syn match  godocTitle "^\([A-Z]*\)$"
+syn match  godocTitle "^\([A-Z][A-Z ]*\)$"
 
 command -nargs=+ HiLink hi def link <args>
 
@@ -17,4 +17,4 @@ delcommand HiLink
 
 let b:current_syntax = "godoc"
 
-" vim:ts=4 sts=2 sw=2:
+" vim:sw=4:et

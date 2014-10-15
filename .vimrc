@@ -164,3 +164,5 @@ map <leader>fw :FixWhitespace<CR>
 set updatetime=200
 let g:hlvarhl="ctermbg=black ctermfg=blue guifg=#0000ff guibg=#000000 gui=bold"
 let g:hlvarcurrent = 1
+
+let g:gofmt_command="goimports"
