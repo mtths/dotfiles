@@ -1,8 +1,8 @@
-#!/bin/bash                                                                     
+#!/bin/bash
 
 SESSION=$1
 if [ "x$SESSION" = "x" ]; then
-    echo "pick a session"                                                       
+    echo "pick a session"
     tmux list-sessions
     exit;
 fi
