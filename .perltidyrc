@@ -6,12 +6,15 @@
 -ci=4   # Continuation indent is 4 cols
 -se     # Errors to STDERR
 -pt=2   # Maximal paren tightness
+-otr    # opening token right
 -vt=2   # Maximal vertical tightness
 -vtc=2  # Maximal vertical closing tightness
 -lp     # line up parentheses
 -sot    # stack opening tokens
--sct    # stack opening tokens
+-sct    # stack closing tokens
+-sbt=2  # square bracket tightness
 -bbt=0  # Minimum block brace tightness
 -nsfs   # No space before semicolons
 -nolq   # Don't outdent long quoted strings
--wbb="% + - * / x != == >= <= =~ < > | & = **= += *= &= <<= &&= -= /= |= >>= ||= //= .= %= ^= x=" # Break before all operators
+-bbao   # Break before all operators
+-nbbc   # no blank lines before comments
