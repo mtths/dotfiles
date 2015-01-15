@@ -141,12 +141,19 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap ,a :Ack 
 
 " syntastic.vim
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_perl_checker=1
 let g:syntastic_perl_perlcritic_thres=4
 let g:syntastic_perl_checkers = ['perl', 'perlcritic']
 let g:syntastic_perl_interpreter='perl'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>
