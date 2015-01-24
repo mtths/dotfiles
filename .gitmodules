@@ -23,3 +23,6 @@
 [submodule ".vim/bundle/neocomplcache.vim"]
 	path = .vim/bundle/neocomplcache.vim
 	url = https://github.com/Shougo/neocomplcache.vim.git
+[submodule "perlomni.vim"]
+	path = perlomni.vim
+	url = https://github.com/c9s/perlomni.vim.git
