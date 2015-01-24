@@ -20,3 +20,6 @@
 [submodule ".vim/bundle/MatchTag"]
 	path = .vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag
+[submodule ".vim/bundle/neocomplcache.vim"]
+	path = .vim/bundle/neocomplcache.vim
+	url = https://github.com/Shougo/neocomplcache.vim.git
