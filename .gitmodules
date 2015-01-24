@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/syntastic.vim"]
 	path = .vim/bundle/syntastic.vim
 	url = https://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
