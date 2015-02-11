@@ -152,7 +152,7 @@ let g:syntastic_perl_checkers = ['perl', 'perlcritic']
 let g:syntastic_perl_interpreter='perl'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " gundo.vim
@@ -172,7 +172,7 @@ let g:gofmt_command="goimports"
 " neocomplcache.vim
 
 " Disable AutoComplPop.
-"let g:acp_enableAtStartup = 0
+let g:acp_enableAtStartup = 0
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
