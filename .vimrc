@@ -1,6 +1,4 @@
-call pathogen#infect()
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 syntax on
 set t_Co=256
 colorscheme badwolf
