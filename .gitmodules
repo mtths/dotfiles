@@ -26,3 +26,6 @@
 [submodule ".vim/bundle/perlomni.vim"]
 	path = .vim/bundle/perlomni.vim
 	url = https://github.com/c9s/perlomni.vim.git
+[submodule ".vim/bundle/limelight.vim"]
+	path = .vim/bundle/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git
