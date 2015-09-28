@@ -1,5 +1,7 @@
 # my .perltidyrc file
 #
+-pbp
+-nst    # dont output to stdout
 -ce     # cuddled else
 -l=78   # Max line width is 78 cols
 -i=4    # Indent level is 4 cols
