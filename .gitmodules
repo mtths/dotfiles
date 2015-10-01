@@ -4,16 +4,6 @@
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule ".vim/bundle/vim-multiple-cursors"]
-	path = .vim/bundle/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-ragtag"]
-	path = .vim/bundle/vim-ragtag
-	url = https://github.com/tpope/vim-ragtag.git
-[submodule ".vim/bundle/vim-ansible-yaml"]
-	path = .vim/bundle/vim-ansible-yaml
-	url = https://github.com/chase/vim-ansible-yaml.git
 [submodule ".vim/bundle/vim-sensible"]
 	path = .vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
@@ -26,6 +16,3 @@
 [submodule ".vim/bundle/perlomni.vim"]
 	path = .vim/bundle/perlomni.vim
 	url = https://github.com/c9s/perlomni.vim.git
-[submodule ".vim/bundle/limelight.vim"]
-	path = .vim/bundle/limelight.vim
-	url = https://github.com/junegunn/limelight.vim.git
