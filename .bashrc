@@ -125,3 +125,4 @@ keychain id_rsa id_dsa
     source $HOME/.keychain/$HOSTNAME-sh
 
 vnstat -d | head -5; vnstat -d | tail -9
+export PATH=~/.rakudobrew/bin:$PATH
