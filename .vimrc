@@ -1,15 +1,11 @@
 execute pathogen#infect()
 syntax on
 set t_Co=256
-colorscheme badwolf
+colorscheme pablo
 "colorscheme ez
 "set background=dark
 
-if exists('+colorcolumn')
-    set colorcolumn=78
-else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
-endif
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
 
 "let g:SuperTabDefaultCompletionType = "context"
 
