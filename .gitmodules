@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/perlomni.vim"]
 	path = .vim/bundle/perlomni.vim
 	url = https://github.com/c9s/perlomni.vim.git
+[submodule ".vim/bundle/vim-ir_black"]
+	path = .vim/bundle/vim-ir_black
+	url = https://github.com/wesgibbs/vim-irblack.git
