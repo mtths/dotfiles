@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/vim-ir_black"]
 	path = .vim/bundle/vim-ir_black
 	url = https://github.com/wesgibbs/vim-irblack.git
+[submodule ".vim/bundle/vim-perldoc"]
+	path = .vim/bundle/vim-perldoc
+	url = https://github.com/hotchpotch/perldoc-vim.git
