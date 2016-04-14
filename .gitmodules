@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/vim-perldoc"]
 	path = .vim/bundle/vim-perldoc
 	url = https://github.com/hotchpotch/perldoc-vim.git
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
