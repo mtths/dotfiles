@@ -125,6 +125,9 @@ set undodir=~/.vim/undodir
 
 set switchbuf=split
 
+" vim-gitgutter recommended
+set updatetime=250
+
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -243,3 +246,6 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\|\h\w*->\h\w*\|\h\w*::\|\h\w*::\h\w*'
+
+" fugitive.vim
+map <leader>gs :Gstatus<cr>
