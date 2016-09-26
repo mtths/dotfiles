@@ -1,4 +1,6 @@
-execute pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
+
 syntax on
 set t_Co=256
 colorscheme grb256
