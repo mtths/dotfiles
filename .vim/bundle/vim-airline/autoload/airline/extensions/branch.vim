@@ -41,6 +41,10 @@ function! airline#extensions#branch#get_head()
     endif
   endif
 
+  if winwidth(0) < 120 && len(split(head, '\zs')) > 9
+    let head =  matchstr(head, '^.\{20\}').'…'
+  endif
+
   return empty(head) || !s:check_in_path()
         \ ? s:empty_message
         \ : printf('%s%s', empty(s:symbol) ? '' : s:symbol.(g:airline_symbols.space), head)
