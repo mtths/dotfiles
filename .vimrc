@@ -62,7 +62,7 @@ set scrolloff=3
 set diffopt+=iwhite
 
 " folding settings
-set foldmethod=syntax   "fold based on indent
+"set foldmethod=syntax   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
