@@ -251,3 +251,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\|\h\w*->\h\w*\|\h\
 
 " fugitive.vim
 map <leader>gs :Gstatus<cr>
+
+" CtrlP settings
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
