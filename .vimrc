@@ -61,11 +61,6 @@ set scrolloff=3
 " ignore whitespace in diff mode
 set diffopt+=iwhite
 
-" folding settings
-"set foldmethod=syntax   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=1         "this is just what i use
 
 "some selfdefined mappings
 "    ;; regex search & replace w/ global modifier
