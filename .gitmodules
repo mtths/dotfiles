@@ -28,3 +28,4 @@
 [submodule ".vim/bundle/conflict-marker.vim"]
 	path = .vim/bundle/conflict-marker.vim
 	url = https://github.com/rhysd/conflict-marker.vim.git
+    ignore = dirty
