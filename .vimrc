@@ -114,6 +114,9 @@ autocmd WinLeave * setlocal nocursorline
 "hi CursorColumn cterm=NONE ctermbg=lightgrey ctermfg=darkgrey guibg=lightgrey guifg=darkgrey
 nnoremap <leader>cl :set cursorline!<CR>
 
+" write buffer with elevated permissions
+cmap w!! w !sudo tee % >/dev/null
+
 set expandtab
 set sw=4
 set ts=4
