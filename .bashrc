@@ -124,6 +124,10 @@ hx() {
 pgw() {
     ping $( ip route list 0/0 | awk '{ print $3 }' )
 }
+grefresh() {
+    local cur_branch=$(git branch | awk '/^\*/ {print$2}')
+    (git checkout master && git pull && git checkout $cur_branch) > /dev/null
+}
 
 keychain id_rsa id_dsa
 [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
