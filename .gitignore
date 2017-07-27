@@ -3,3 +3,4 @@
 .vim/undodir
 .vim/sessions
 .vim/bundle/vim-gitgutter/tags
+tags
