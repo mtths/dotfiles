@@ -49,6 +49,10 @@ set smarttab
 set modelines=3
 let mapleader = ","
 
+set encoding=UTF-8
+"someone set up us the BOM
+"set bomb
+
 set list listchars=tab:▸\ ,trail:‧,nbsp:˔
 nmap <silent> <leader>tt :set nolist!<CR>
 
@@ -88,10 +92,6 @@ imap <silent> <S-tab> <C-v><tab>
 
 "set tags=tags\ /usr/local/www/.tags
 "let Tlist_Ctags_Cmd="/usr/bin/ctags-exuberant"
-
-set encoding=UTF-8
-"someone set up us the BOM
-"set bomb
 
 set statusline=%f%m%r%h%w\ [%{&ff}]%y\%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k(%l/%L,%v)\ %p%%
 set laststatus=2
