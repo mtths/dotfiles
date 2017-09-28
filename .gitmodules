@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/MatchTag"]
 	path = .vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag
-[submodule ".vim/bundle/neocomplete"]
-	path = .vim/bundle/neocomplete
-	url = https://github.com/Shougo/neocomplete.vim.git
 [submodule ".vim/bundle/perlomni.vim"]
 	path = .vim/bundle/perlomni.vim
 	url = https://github.com/c9s/perlomni.vim.git
@@ -39,3 +36,6 @@
 	path = .vim/bundle/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
     ignore = dirty
+[submodule ".vim/bundle/vimcompletesme"]
+	path = .vim/bundle/vimcompletesme
+	url = https://github.com/ajh17/VimCompletesMe.git
