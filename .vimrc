@@ -121,7 +121,10 @@ set expandtab
 set sw=4
 set ts=4
 
-set undodir=~/.vim/undodir
+if has("persistent_undo")
+    set undodir=~/.undodir
+    set undofile
+endif
 
 set switchbuf=split
 
