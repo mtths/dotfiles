@@ -3,9 +3,12 @@ call pathogen#helptags()
 
 syntax on
 set t_Co=256
-colorscheme grb256
-"colorscheme ez
-"set background=dark
+colorscheme primaries
+"colorscheme neuromancer
+set background=dark
+
+set number
+set relativenumber
 
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
 

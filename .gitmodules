@@ -39,3 +39,9 @@
 [submodule ".vim/bundle/vimcompletesme"]
 	path = .vim/bundle/vimcompletesme
 	url = https://github.com/ajh17/VimCompletesMe.git
+[submodule ".vim/bundle/vim-primaries"]
+	path = .vim/bundle/vim-primaries
+	url = https://github.com/Siltaar/primaries.vim.git
+[submodule ".vim/bundle/vim-neuromancer"]
+	path = .vim/bundle/vim-neuromancer
+	url = https://github.com/Zabanaa/neuromancer.vim.git
