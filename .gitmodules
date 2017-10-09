@@ -45,3 +45,6 @@
 [submodule ".vim/bundle/vim-neuromancer"]
 	path = .vim/bundle/vim-neuromancer
 	url = https://github.com/Zabanaa/neuromancer.vim.git
+[submodule ".vim/bundle/vim-autopairs"]
+	path = .vim/bundle/vim-autopairs
+	url = https://github.com/jiangmiao/auto-pairs.git
