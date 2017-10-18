@@ -48,3 +48,6 @@
 [submodule ".vim/bundle/vim-autopairs"]
 	path = .vim/bundle/vim-autopairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule ".vim/bundle/vim-bracketed-paste"]
+	path = .vim/bundle/vim-bracketed-paste
+	url = https://github.com/ConradIrwin/vim-bracketed-paste
