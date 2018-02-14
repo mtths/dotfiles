@@ -58,6 +58,8 @@ fi
 #fi
 unset color_prompt force_color_prompt
 
+export LANG=en_GB.utf8
+
 parse_git_branch() {
     git branch 2> /dev/null | perl -lanE 'if (/^\* (.*)/) { $b=$1; $b=~s/^(.{20}).+/$1.../; say "[$b]"; }'
 }

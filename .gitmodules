@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/perlomni.vim"]
 	path = .vim/bundle/perlomni.vim
 	url = https://github.com/c9s/perlomni.vim.git
-[submodule ".vim/bundle/vim-ir_black"]
-	path = .vim/bundle/vim-ir_black
-	url = https://github.com/wesgibbs/vim-irblack.git
 [submodule ".vim/bundle/vim-perldoc"]
 	path = .vim/bundle/vim-perldoc
 	url = https://github.com/hotchpotch/perldoc-vim.git
@@ -51,3 +48,9 @@
 [submodule ".vim/bundle/vim-bracketed-paste"]
 	path = .vim/bundle/vim-bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste
+[submodule ".vim/bundle/rupza.vim"]
+	path = .vim/bundle/rupza.vim
+	url = https://github.com/felipesousa/rupza.git
+[submodule ".vim/bundle/iceberg.vim"]
+	path = .vim/bundle/iceberg.vim
+	url = https://github.com/cocopon/iceberg.vim

@@ -3,8 +3,7 @@ call pathogen#helptags()
 
 syntax on
 set t_Co=256
-colorscheme primaries
-"colorscheme neuromancer
+colorscheme rupza
 set background=dark
 
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
@@ -133,7 +132,7 @@ set updatetime=250
 
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
-let g:ackprg = 'rg --vimgrep'
+let g:ackprg = 'ag --vimgrep'
 nmap ,a :Ack 
 
 " syntastic.vim
