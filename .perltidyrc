@@ -20,3 +20,4 @@
 -nolq   # Don't outdent long quoted strings
 -bbao   # Break before all operators
 -nbbc   # no blank lines before comments
+-bext='/' # delete backup if there is no errors

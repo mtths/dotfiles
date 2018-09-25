@@ -103,6 +103,8 @@ fi
 alias now='date +%s --date "now"'
 alias ..='cd ..'
 alias -- -='cd -'
+alias deploy_live='git co deploy/live && git pull && git merge master && git push'
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -131,8 +133,8 @@ grefresh() {
     (git checkout master && git pull && git checkout $cur_branch) > /dev/null
 }
 
-keychain id_rsa id_dsa
-[ -f $HOME/.keychain/$HOSTNAME-sh ] && \
+[[ -z $SSH_AUTH_SOCK ]] && keychain id_rsa id_dsa \
+    && [[ -f $HOME/.keychain/$HOSTNAME-sh ]] && \
     source $HOME/.keychain/$HOSTNAME-sh
 
 vnstat -d | head -5; vnstat -d | tail -9

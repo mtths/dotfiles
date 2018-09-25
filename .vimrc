@@ -3,7 +3,7 @@ call pathogen#helptags()
 
 syntax on
 set t_Co=256
-colorscheme rupza
+colorscheme grb256
 set background=dark
 
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
@@ -44,6 +44,7 @@ set backspace=indent,eol,start  " backspacing over everything in insert mode
 set smartindent                 " smart autoindenting when starting a new line
 set hidden                      " manage multiple buffers effectively
 set smarttab
+set wrap
 
 set modelines=3
 let mapleader = ","
