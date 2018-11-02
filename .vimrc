@@ -3,7 +3,7 @@ call pathogen#helptags()
 
 syntax on
 set t_Co=256
-colorscheme grb256
+colorscheme rupza
 set background=dark
 
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>78v.\+', -1)
@@ -136,20 +136,12 @@ set updatetime=250
 let g:ackprg = 'ag --vimgrep'
 nmap ,a :Ack 
 
-" syntastic.vim
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_enable_perl_checker=1
-let g:syntastic_perl_perlcritic_thres=4
-let g:syntastic_perl_checkers = ['perl', 'perlcritic']
-let g:syntastic_perl_interpreter='perl'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+" ale.vim
+let g:ale_sign_column_always = 1
+let g:ale_list_window_size = 5
+let g:ale_linters = {
+\   'perl': ['perl','perlcritic'],
+\}
 
 " gundo.vim
 nnoremap <F5> :GundoToggle<CR>
@@ -190,3 +182,10 @@ map <leader>gs :Gstatus<cr>
 " CtrlP settings
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
