@@ -128,17 +128,19 @@ endif
 
 set switchbuf=split
 
+" plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " vim-gitgutter recommended
 set updatetime=250
 
-" plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ack.vim
 let g:ackprg = 'ag --vimgrep'
 nmap ,a :Ack 
 
 " ale.vim
 let g:ale_sign_column_always = 1
-let g:ale_list_window_size = 5
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+let g:ale_open_list = 'on_save'
 let g:ale_linters = {
 \   'perl': ['perl','perlcritic'],
 \}
