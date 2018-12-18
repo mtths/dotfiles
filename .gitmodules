@@ -51,6 +51,6 @@
 [submodule ".vim/bundle/iceberg.vim"]
 	path = .vim/bundle/iceberg.vim
 	url = https://github.com/cocopon/iceberg.vim
-[submodule ".vim/pack/git-plugins/start/ale"]
-	path = .vim/pack/git-plugins/start/ale
+[submodule ".vim/pack/git-plugins/start/vim-ale"]
+	path = .vim/pack/git-plugins/start/vim-ale
 	url = https://github.com/w0rp/ale.git
