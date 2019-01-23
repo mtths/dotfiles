@@ -17,9 +17,6 @@
 	path = .vim/bundle/conflict-marker.vim
 	url = https://github.com/rhysd/conflict-marker.vim.git
     ignore = dirty
-[submodule ".vim/bundle/ctrlpvim"]
-	path = .vim/bundle/ctrlpvim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule ".vim/bundle/vim-repeat"]
 	path = .vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
