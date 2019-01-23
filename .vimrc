@@ -59,6 +59,8 @@ nmap <silent> <leader>tt :set nolist!<CR>
 " reset search highlighting
 nmap <silent> <leader>/ :nohlsearch<CR>
 
+nmap <leader>cn :cnext<CR>
+
 " keep some context around cursor
 set scrolloff=3
 
@@ -128,13 +130,30 @@ endif
 
 set switchbuf=split
 
+function! StripTrailingWhitespace()
+  if !&binary && &filetype != 'diff'
+    normal mz
+    normal Hmy
+    %s/\s\+$//e
+    normal 'yz<CR>
+    normal `z
+  endif
+endfunction
+
+nnoremap <leader>fw :call StripTrailingWhitespace()<cr>
+
+if executable("ag")
+    set grepprg=ag\ --vimgrep
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
+nnoremap <leader>b :b <C-d>
+nnoremap <leader>e :e **/
+nnoremap <leader>a :grep<space>
+
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " vim-gitgutter recommended
 set updatetime=250
-
-" ack.vim
-let g:ackprg = 'ag --vimgrep'
-nmap ,a :Ack 
 
 " ale.vim
 let g:ale_sign_column_always = 1
@@ -144,9 +163,6 @@ let g:ale_open_list = 'on_save'
 let g:ale_linters = {
 \   'perl': ['perl','perlcritic'],
 \}
-
-" gundo.vim
-nnoremap <F5> :GundoToggle<CR>
 
 " lightline.vim
 let g:lightline = {
@@ -167,9 +183,6 @@ let g:lightline = {
       \ 'separator': { 'left': '>', 'right': '<' },
       \ 'subseparator': { 'left': '>', 'right': '<' }
       \ }
-
-" trailing-whitespace
-map <leader>fw :FixWhitespace<CR>
 
 let g:gofmt_command="goimports"
 
