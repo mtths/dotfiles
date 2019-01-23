@@ -148,6 +148,7 @@ if executable("ag")
 endif
 
 nnoremap <leader>b :b <C-d>
+nnoremap <c-p> :tabe **/
 nnoremap <leader>e :e **/
 nnoremap <leader>a :grep<space>
 
@@ -193,10 +194,6 @@ let g:vcm_omni_pattern = '\h\w*->\|\h\w*->\h\w*\|\h\w*::\|\h\w*::\h\w*'
 
 " fugitive.vim
 map <leader>gs :Gstatus<cr>
-
-" CtrlP settings
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
