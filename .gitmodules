@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/vim-sensible"]
 	path = .vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule ".vim/bundle/MatchTag"]
-	path = .vim/bundle/MatchTag
-	url = https://github.com/gregsexton/MatchTag
 [submodule ".vim/bundle/perlomni.vim"]
 	path = .vim/bundle/perlomni.vim
 	url = https://github.com/c9s/perlomni.vim.git
@@ -36,9 +33,6 @@
 [submodule ".vim/bundle/vim-neuromancer"]
 	path = .vim/bundle/vim-neuromancer
 	url = https://github.com/Zabanaa/neuromancer.vim.git
-[submodule ".vim/bundle/vim-autopairs"]
-	path = .vim/bundle/vim-autopairs
-	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule ".vim/bundle/vim-bracketed-paste"]
 	path = .vim/bundle/vim-bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste
@@ -51,3 +45,6 @@
 [submodule ".vim/pack/git-plugins/start/vim-ale"]
 	path = .vim/pack/git-plugins/start/vim-ale
 	url = https://github.com/w0rp/ale.git
+[submodule ".vim/bundle/pear-tree.vim"]
+	path = .vim/bundle/pear-tree.vim
+	url = https://github.com/tmsvg/pear-tree.git
