@@ -147,14 +147,25 @@ if executable("ag")
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-nnoremap <leader>b :b <C-d>
+nnoremap <leader>b :sb <C-d>
 nnoremap <c-p> :tabe **/
-nnoremap <leader>e :e **/
+nnoremap <leader>e :sp **/
 nnoremap <leader>a :grep<space>
+
+runtime macros/matchit.vim
+
+" open quickfix window automatically on make/grep
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 " plugins ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " vim-gitgutter recommended
 set updatetime=250
+
+" pear-tree
+let g:pear_tree_smart_openers = 1
+let g:pear_tree_smart_closers = 1
+let g:pear_tree_smart_backspace = 1
 
 " ale.vim
 let g:ale_sign_column_always = 1
