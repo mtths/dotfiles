@@ -54,12 +54,12 @@ set encoding=UTF-8
 "set bomb
 
 set list listchars=tab:▸\ ,trail:‧,nbsp:˔
-nmap <silent> <leader>tt :set nolist!<CR>
+nmap <silent> <leader>nl :set nolist!<CR>
 
 " reset search highlighting
 nmap <silent> <leader>/ :nohlsearch<CR>
 
-nmap <leader>cn :cnext<CR>
+nmap <F5> :cnext<CR>
 
 " keep some context around cursor
 set scrolloff=3
@@ -166,6 +166,14 @@ set updatetime=250
 let g:pear_tree_smart_openers = 1
 let g:pear_tree_smart_closers = 1
 let g:pear_tree_smart_backspace = 1
+let g:pear_tree_pairs = {
+\   '(': {'closer': ')'},
+\   '[': {'closer': ']'},
+\   '{': {'closer': '}'},
+\   "'": {'closer': "'"},
+\   '"': {'closer': '"'},
+\   '<*>': {'closer': '</*>', 'not_if': ['br', 'meta', 'img'], 'until': '\W'}
+\ }
 
 " ale.vim
 let g:ale_sign_column_always = 1
