@@ -61,7 +61,7 @@ unset color_prompt force_color_prompt
 export LANG=en_GB.utf8
 
 parse_git_branch() {
-    git branch 2> /dev/null | perl -lanE 'if (/^\* (.*)/) { $b=$1; $b=~s/^(.{20}).+/$1.../; say "[$b]"; }'
+    git branch 2> /dev/null | perl -lanE 'if (/^\* (.*)/) { $b=$1; $b=~s/^(.{20}).+/$1…/; say "[$b]"; }'
 }
 
 export PS1='\[\e[32;1m\]\u@${debian_chroot:+($debian_chroot)}\h\[\e[0m\]:\[\e[36;1m\]\W\[\e[0m\]\[\e[1;35m\]$( [ $? == 0 ] && echo "✔"  || echo "⚠" )\[\e[31;1m\] $(parse_git_branch)\$\[\e[0m\] '
